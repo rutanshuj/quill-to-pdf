@@ -74,7 +74,7 @@ class PdfBuilder {
     buildEmbed(embed: InsertEmbed, doc: any) {
         doc.moveDown();
         if (embed.image) {
-            doc.image(embed.image, { fit: [200, 200], align: 'center' });
+            doc.image(embed.image);
         } else if (embed.video) {
             doc.font(this.style.normal.font);
             doc.fontSize(this.style.normal.fontSize);
