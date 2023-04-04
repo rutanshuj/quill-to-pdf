@@ -55,7 +55,7 @@ class PdfBuilder {
     // This routes paragraphs to the appropriate handler based on whether
     // the paragraph is an embed, formatted, or not formatted.
     buildParagraph(paragraph: QParagraph, doc: any): void {
-        doc.moveDown();
+        // doc.moveDown();
         // handle embeds
         if (paragraph.embed) {
             this.resetLevelTrackers();
@@ -72,7 +72,7 @@ class PdfBuilder {
 
     // handles video and image embeds
     buildEmbed(embed: InsertEmbed, doc: any) {
-        doc.moveDown();
+        // doc.moveDown();
         if (embed.image) {
             doc.image(embed.image);
         } else if (embed.video) {
